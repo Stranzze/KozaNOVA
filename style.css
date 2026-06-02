@@ -267,7 +267,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('images/ChatGPT Image 26 May 2026 17_34_24 kopyası.png') center/cover no-repeat;
+  background: url('images/hero-bg.png') center/cover no-repeat;
   opacity: 0.4;
   z-index: 0;
 }
