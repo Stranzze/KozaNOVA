@@ -103,32 +103,74 @@
 
     applyTranslations(currentLang);
 
-    /* ---------- 6. FORM SUBMISSION ---------- */
+    /* ---------- 6. FORM VALIDATION & SUBMISSION ---------- */
+    function validateForm(form) {
+        const fields = [
+            { el: form.querySelector('[name="name"]'), test: v => v.value.trim().length > 0,
+              msg: { tr: 'Adınız ve soyadınız zorunludur.', en: 'Name is required.' } },
+            { el: form.querySelector('[name="email"]'), test: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.value.trim()),
+              msg: { tr: 'Geçerli bir e-posta adresi giriniz.', en: 'Enter a valid email address.' } },
+            { el: form.querySelector('[name="phone"]'), test: v => /^[0-9\s\+\-\(\)]{7,20}$/.test(v.value.trim()),
+              msg: { tr: 'Geçerli bir telefon numarası giriniz.', en: 'Enter a valid phone number.' } },
+            { el: form.querySelector('[name="interest"]'), test: v => v.value !== '',
+              msg: { tr: 'İlgi alanınızı seçiniz.', en: 'Please select an area of interest.' } }
+        ];
+
+        const errors = [];
+        fields.forEach(({ el, test, msg }) => {
+            const valid = test(el);
+            el.classList.toggle('error', !valid);
+            if (!valid) errors.push(msg[currentLang]);
+        });
+
+        return errors;
+    }
+
     document.querySelectorAll('.contact-form').forEach(form => {
+        const errorDiv = form.querySelector('.form-error');
+
         form.addEventListener('submit', function(e) {
-            e.preventDefault();
+            const errors = validateForm(this);
+
+            if (errors.length > 0) {
+                e.preventDefault();
+                errorDiv.textContent = errors.join(' ');
+                errorDiv.style.display = 'block';
+                this.querySelector('.error')?.focus();
+                return;
+            }
+
+            errorDiv.style.display = 'none';
+
             const btn = this.querySelector('button[type="submit"]');
             const original = btn.textContent;
-            btn.textContent = '✓ ' + (currentLang === 'tr' ? 'Gönderildi' : 'Sent');
-            btn.style.background = '#2ecc71';
-            btn.style.borderColor = '#2ecc71';
-            btn.style.color = '#fff';
+            btn.disabled = true;
+            btn.textContent = currentLang === 'tr' ? 'Gönderiliyor...' : 'Sending...';
 
-            const msg = document.createElement('div');
-            msg.style.cssText = 'margin-top:1rem;padding:1rem 1.25rem;background:rgba(46,204,113,0.12);border:1px solid rgba(46,204,113,0.3);border-radius:8px;font-size:0.85rem;color:rgba(255,255,255,0.85);text-align:center;';
-            msg.textContent = currentLang === 'tr'
-                ? 'Teşekkürler! Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız.'
-                : 'Thank you! Your message has been sent successfully. We will get back to you shortly.';
-            this.appendChild(msg);
-
-            this.reset();
-            setTimeout(() => {
+            if (!this.hasAttribute('data-netlify')) {
+                e.preventDefault();
+                const msg = document.createElement('div');
+                msg.style.cssText = 'margin-top:1rem;padding:1rem 1.25rem;background:rgba(46,204,113,0.12);border:1px solid rgba(46,204,113,0.3);border-radius:8px;font-size:0.85rem;color:rgba(255,255,255,0.85);text-align:center;';
+                msg.textContent = currentLang === 'tr'
+                    ? 'Teşekkürler! Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız.'
+                    : 'Thank you! Your message has been sent successfully. We will get back to you shortly.';
+                this.appendChild(msg);
+                this.reset();
+                btn.disabled = false;
                 btn.textContent = original;
-                btn.style.background = '';
-                btn.style.borderColor = '';
-                btn.style.color = '';
-                msg.remove();
-            }, 5000);
+                setTimeout(() => msg.remove(), 5000);
+            }
+        });
+
+        form.querySelectorAll('input, select, textarea').forEach(el => {
+            el.addEventListener('input', () => {
+                el.classList.remove('error');
+                if (errorDiv.style.display === 'block') {
+                    const errors = validateForm(form);
+                    errorDiv.textContent = errors.join(' ');
+                    if (errors.length === 0) errorDiv.style.display = 'none';
+                }
+            });
         });
     });
 

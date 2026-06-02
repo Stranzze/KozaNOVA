@@ -85,21 +85,22 @@
             </div>
           </div>
         </div>
-        <form class="contact-form">
+        <form class="contact-form" netlify name="contact" novalidate>
           <div class="form-row">
-            <input type="text" data-i18n-placeholder="form-name" placeholder="Adınız Soyadınız" required>
-            <input type="email" data-i18n-placeholder="form-email" placeholder="E-posta Adresiniz" required>
+            <input type="text" name="name" data-i18n-placeholder="form-name" placeholder="Adınız Soyadınız" required>
+            <input type="email" name="email" data-i18n-placeholder="form-email" placeholder="E-posta Adresiniz" required>
           </div>
-          <input type="tel" data-i18n-placeholder="form-phone" placeholder="Telefon Numaranız">
-          <select data-i18n-placeholder="form-interest">
+          <input type="tel" name="phone" data-i18n-placeholder="form-phone" placeholder="Telefon Numaranız" required pattern="[0-9\s\+\-\(\)]{7,20}">
+          <select name="interest" data-i18n-placeholder="form-interest" required>
             <option value="" disabled selected data-i18n="form-interest">İlgi Alanınız</option>
-            <option data-i18n="form-interest-1">Satılık Konut</option>
-            <option data-i18n="form-interest-2">Kiralık Konut</option>
-            <option data-i18n="form-interest-3">Danışmanlık</option>
-            <option data-i18n="form-interest-4">Değerleme</option>
-            <option data-i18n="form-interest-5">Diğer</option>
+            <option value="satilik" data-i18n="form-interest-1">Satılık Konut</option>
+            <option value="kiralik" data-i18n="form-interest-2">Kiralık Konut</option>
+            <option value="danismanlik" data-i18n="form-interest-3">Danışmanlık</option>
+            <option value="degerleme" data-i18n="form-interest-4">Değerleme</option>
+            <option value="diger" data-i18n="form-interest-5">Diğer</option>
           </select>
-          <textarea rows="4" data-i18n-placeholder="form-message" placeholder="Mesajınız (isteğe bağlı)"></textarea>
+          <textarea rows="4" name="message" data-i18n-placeholder="form-message" placeholder="Mesajınız (isteğe bağlı)"></textarea>
+          <div class="form-error" style="display:none;color:#e74c3c;font-size:0.85rem;margin-bottom:1rem;padding:0.75rem 1rem;background:rgba(231,76,60,0.1);border:1px solid rgba(231,76,60,0.2);border-radius:8px;"></div>
           <button type="submit" class="btn-primary btn-full" data-i18n="form-submit">Gönder</button>
         </form>
       </div>

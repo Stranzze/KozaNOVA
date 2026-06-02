@@ -1205,6 +1205,13 @@ body {
   margin-top: 0.5rem;
 }
 
+.contact-form input.error,
+.contact-form select.error,
+.contact-form textarea.error {
+  border-color: #e74c3c;
+  background: rgba(231, 76, 60, 0.06);
+}
+
 /* ========== FOOTER ========== */
 
 .footer {
