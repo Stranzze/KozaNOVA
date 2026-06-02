@@ -1494,6 +1494,21 @@ body {
 }
 
 @media (max-width: 768px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .about-img {
+    aspect-ratio: auto;
+    min-height: 320px;
+  }
+
+  .team-avatar {
+    width: 56px;
+    height: 56px;
+  }
+
   .nav-links {
     position: fixed;
     top: 72px;
@@ -1587,6 +1602,10 @@ body {
     text-align: center;
   }
 
+  .about-img {
+    min-height: 240px;
+  }
+
   .about-decor {
     right: 0;
     bottom: -1.5rem;
@@ -1595,5 +1614,10 @@ body {
 
   .about-decor-num {
     font-size: 2rem;
+  }
+
+  .team-avatar {
+    width: 48px;
+    height: 48px;
   }
 }
