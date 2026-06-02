@@ -1426,8 +1426,9 @@ body {
 }
 
 .home .section-footer .btn-wide {
-  padding: 0.8rem 3rem;
-  font-size: 0.85rem;
+  padding: 1.2rem 4rem;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
 }
 
 /* ========== ANIMATIONS ========== */
