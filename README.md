@@ -71,7 +71,7 @@ Site, tamamen statik HTML/CSS/JavaScript ile geliştirilmiş olup, herhangi bir 
 | Kategori | Kullanılan Teknoloji |
 |----------|---------------------|
 | **Frontend** | HTML5, CSS3, JavaScript (Vanilla) |
-| **Dil Sistemi** | `translations.js` ile JSON tabanlı çoklu dil desteği |
+| **Dil Sistemi** | `js/translations.js` ile JSON tabanlı çoklu dil desteği |
 | **Tema** | CSS değişkenleri ile aydınlık/karanlık tema |
 | **Tasarım** | Responsive grid/flexbox, modern gradientler |
 | **Harita** | Yandex Haritalar API (iframe entegrasyonu) |
@@ -95,6 +95,11 @@ kozanova/
 ├── style.css             # Ana stil dosyası (tema değişkenleri + responsive)
 ├── script.js             # Ana JS dosyası (dil, tema, animasyonlar)
 ├── translations.js       # Çoklu dil çeviri dosyası (Türkçe / İngilizce)
+├── css/
+│   └── style.css             # Ana stil dosyası (tema değişkenleri + responsive)
+├── js/
+│   ├── script.js             # Ana JS dosyası (dil, tema, animasyonlar)
+│   └── translations.js       # Çoklu dil çeviri dosyası (Türkçe / İngilizce)
 ├── images/
 │   ├── logo.png          # Firma logosu
 │   ├── favicon.png       # Tarayıcı favicon
