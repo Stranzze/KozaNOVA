@@ -38,7 +38,11 @@
   <!-- HERO -->
   <header class="hero" id="hero">
     <div class="hero-bg">
-      <img src="images/hero-bg.jpg" alt="" class="hero-img" fetchpriority="high" width="1920" height="1080">
+      <picture>
+        <source srcset="images/hero-bg-480w.webp 480w, images/hero-bg-768w.webp 768w, images/hero-bg.webp 1920w" sizes="100vw" type="image/webp">
+        <source srcset="images/hero-bg-768w.jpg 768w, images/hero-bg.jpg 1920w" sizes="100vw" type="image/jpeg">
+        <img src="images/hero-bg.jpg" alt="" class="hero-img" fetchpriority="high" width="1920" height="1080">
+      </picture>
       <div class="hero-overlay"></div>
     </div>
     <div class="hero-content">
@@ -87,7 +91,10 @@
       <div class="about-grid">
         <div class="about-visual">
           <div class="about-img">
-            <img src="images/about-office.jpg" alt="KozaNOVA Ofis" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:var(--radius);">
+            <picture>
+              <source srcset="images/about-office.webp" type="image/webp">
+              <img src="images/about-office.jpg" alt="KozaNOVA Ofis" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:var(--radius);">
+            </picture>
             <div class="about-decor">
               <span class="about-decor-num" data-i18n="about-stat-num-2">2+</span>
               <span class="about-decor-text" data-i18n="about-stat-2">Yıllık<br>Tecrübe</span>
@@ -138,7 +145,10 @@
       <div class="property-grid">
         <article class="property-card">
           <div class="property-img-wrap">
-            <img src="images/project-darica.jpg" alt="Darıca Konut" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+            <picture>
+              <source srcset="images/project-darica.webp" type="image/webp">
+              <img src="images/project-darica.jpg" alt="Darıca Konut" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+            </picture>
             <div class="property-badge" data-i18n="listing-1-badge">Tamamlandı</div>
           </div>
           <div class="property-body">
@@ -153,7 +163,10 @@
         </article>
         <article class="property-card card-featured">
           <div class="property-img-wrap">
-            <img src="images/project-izmit.jpg" alt="İzmit Villa" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+            <picture>
+              <source srcset="images/project-izmit.webp" type="image/webp">
+              <img src="images/project-izmit.jpg" alt="İzmit Villa" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+            </picture>
             <div class="property-badge" data-i18n="listing-2-badge">Tamamlandı</div>
           </div>
           <div class="property-body">
@@ -168,7 +181,10 @@
         </article>
         <article class="property-card">
           <div class="property-img-wrap">
-            <img src="images/project-gebze.jpg" alt="Gebze Ofis" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+            <picture>
+              <source srcset="images/project-gebze.webp" type="image/webp">
+              <img src="images/project-gebze.jpg" alt="Gebze Ofis" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+            </picture>
             <div class="property-badge" data-i18n="listing-3-badge">Tamamlandı</div>
           </div>
           <div class="property-body">
@@ -183,7 +199,10 @@
         </article>
         <article class="property-card">
           <div class="property-img-wrap">
-            <img src="images/project-basiskele.jpg" alt="Başiskele Konut" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+            <picture>
+              <source srcset="images/project-basiskele.webp" type="image/webp">
+              <img src="images/project-basiskele.jpg" alt="Başiskele Konut" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+            </picture>
             <div class="property-badge" data-i18n="listing-6-badge">Tamamlandı</div>
           </div>
           <div class="property-body">
@@ -267,7 +286,10 @@
       <div class="team-grid">
           <div class="team-card">
             <div class="team-avatar" style="position:relative; overflow:hidden;">
-              <img src="images/team-hasan.jpeg" alt="Hasan Hüseyin Kozan" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+              <picture>
+                <source srcset="images/team-hasan.webp" type="image/webp">
+                <img src="images/team-hasan.jpeg" alt="Hasan Hüseyin Kozan" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+              </picture>
             </div>
             <h3 data-i18n="team-1-name">Hasan Hüseyin Kozan</h3>
             <span class="team-role" data-i18n="team-1-role">Kurucu & Gayrimenkul Danışmanı</span>
@@ -275,7 +297,10 @@
           </div>
           <div class="team-card">
             <div class="team-avatar" style="position:relative; overflow:hidden;">
-              <img src="images/team-berat.jpg" alt="Berat Kozan" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+              <picture>
+                <source srcset="images/team-berat.webp" type="image/webp">
+                <img src="images/team-berat.jpg" alt="Berat Kozan" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+              </picture>
             </div>
           <h3 data-i18n="team-2-name">Berat Kozan</h3>
           <span class="team-role" data-i18n="team-2-role">Gayrimenkul Danışmanı</span>
