@@ -6,9 +6,13 @@
   <title>KozaNOVA Gayrimenkul | Profesyonel Emlak Hizmetleri</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+  <link rel="preload" href="images/hero-bg.jpg" as="image" fetchpriority="high">
   <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="css/style.css"></noscript>
 </head>
 <body class="home">
 
@@ -37,7 +41,7 @@
   <!-- HERO -->
   <header class="hero" id="hero">
     <div class="hero-bg">
-      <img src="images/hero-bg.png" alt="" class="hero-img">
+      <img src="images/hero-bg.jpg" alt="" class="hero-img" fetchpriority="high">
       <div class="hero-overlay"></div>
     </div>
     <div class="hero-content">
@@ -86,7 +90,7 @@
       <div class="about-grid">
         <div class="about-visual">
           <div class="about-img">
-            <img src="images/about-office.png" alt="KozaNOVA Ofis" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:var(--radius);">
+            <img src="images/about-office.jpg" alt="KozaNOVA Ofis" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:var(--radius);">
             <div class="about-decor">
               <span class="about-decor-num" data-i18n="about-stat-num-2">2+</span>
               <span class="about-decor-text" data-i18n="about-stat-2">Yıllık<br>Tecrübe</span>
@@ -137,7 +141,7 @@
       <div class="property-grid">
         <article class="property-card">
           <div class="property-img-wrap">
-            <img src="images/project-darica.jpeg" alt="Darıca Konut" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+            <img src="images/project-darica.jpg" alt="Darıca Konut" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
             <div class="property-badge" data-i18n="listing-1-badge">Tamamlandı</div>
           </div>
           <div class="property-body">
@@ -152,7 +156,7 @@
         </article>
         <article class="property-card card-featured">
           <div class="property-img-wrap">
-            <img src="images/project-izmit.jpeg" alt="İzmit Villa" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+            <img src="images/project-izmit.jpg" alt="İzmit Villa" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
             <div class="property-badge" data-i18n="listing-2-badge">Tamamlandı</div>
           </div>
           <div class="property-body">
@@ -167,7 +171,7 @@
         </article>
         <article class="property-card">
           <div class="property-img-wrap">
-            <img src="images/project-gebze.jpeg" alt="Gebze Ofis" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+            <img src="images/project-gebze.jpg" alt="Gebze Ofis" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
             <div class="property-badge" data-i18n="listing-3-badge">Tamamlandı</div>
           </div>
           <div class="property-body">
@@ -182,7 +186,7 @@
         </article>
         <article class="property-card">
           <div class="property-img-wrap">
-            <img src="images/project-basiskele.jpeg" alt="Başiskele Konut" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+            <img src="images/project-basiskele.jpg" alt="Başiskele Konut" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
             <div class="property-badge" data-i18n="listing-6-badge">Tamamlandı</div>
           </div>
           <div class="property-body">
@@ -274,7 +278,7 @@
           </div>
           <div class="team-card">
             <div class="team-avatar" style="position:relative; overflow:hidden;">
-              <img src="images/team-berat.jpeg" alt="Berat Kozan" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+              <img src="images/team-berat.jpg" alt="Berat Kozan" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
             </div>
           <h3 data-i18n="team-2-name">Berat Kozan</h3>
           <span class="team-role" data-i18n="team-2-role">Gayrimenkul Danışmanı</span>
