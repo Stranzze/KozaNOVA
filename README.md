@@ -46,10 +46,10 @@ Site, tamamen statik HTML/CSS/JavaScript ile geliştirilmiş olup, herhangi bir 
 ## 🖼 Önizleme
 
 ### Ana Sayfa
-![Ana Sayfa](images/hero-bg.png)
+![Ana Sayfa](images/hero-bg.jpg)
 
 ### Hakkımızda
-![Hakkımızda](images/about-office.png)
+![Hakkımızda](images/about-office.jpg)
 
 ---
 
@@ -103,8 +103,8 @@ kozanova/
 ├── images/
 │   ├── logo.png          # Firma logosu
 │   ├── favicon.png       # Tarayıcı favicon
-│   ├── hero-bg.png       # Ana sayfa hero görseli
-│   ├── about-office.png  # Hakkımızda ofis görseli
+│   ├── hero-bg.jpg       # Ana sayfa hero görseli
+│   ├── about-office.jpg  # Hakkımızda ofis görseli
 │   ├── team-berat.jpeg   # Ekip: Berat Korkmaz
 │   ├── team-hasan.jpeg   # Ekip: Hasan Korkmaz
 │   ├── project-darica.jpeg
