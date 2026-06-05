@@ -1,12 +1,12 @@
 (function() {
     'use strict';
 
-    /* ---------- 1. NAV TOGGLE (mobile) ---------- */
+    /* NAV TOGGLE (mobile) */
     document.querySelector('.nav-toggle')?.addEventListener('click', () => {
         document.querySelector('.nav').classList.toggle('nav-open');
     });
 
-    /* ---------- 2. REVEAL OBSERVER ---------- */
+    /*  REVEAL OBSERVER  */
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -18,7 +18,7 @@
 
     document.querySelectorAll('.property-card, .service-card, .team-card, .contact-form, .about-content').forEach(el => revealObserver.observe(el));
 
-    /* ---------- 3. SMOOTH SCROLL ---------- */
+    /*  SMOOTH SCROLL  */
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
@@ -32,7 +32,7 @@
         });
     });
 
-    /* ---------- 4. DARK MODE ---------- */
+    /*  DARK   */
     const darkToggle = document.getElementById('darkToggle');
     const html = document.documentElement;
 
@@ -57,7 +57,7 @@
         });
     }
 
-    /* ---------- 5. LANGUAGE SWITCHER ---------- */
+    /*  LANGUAGE  */
     const langToggle = document.getElementById('langToggle');
     let currentLang = localStorage.getItem('lang') || 'tr';
 
@@ -103,7 +103,7 @@
 
     applyTranslations(currentLang);
 
-    /* ---------- 6. FORM VALIDATION & SUBMISSION ---------- */
+    /*  FORM VALIDATION & SUBMISSION  */
     function validateForm(form) {
         const fields = [
             { el: form.querySelector('[name="name"]'), test: v => v.value.trim().length > 0,
