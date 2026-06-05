@@ -364,7 +364,7 @@
             <input type="text" name="name" data-i18n-placeholder="form-name" placeholder="Adınız Soyadınız" required>
             <input type="email" name="email" data-i18n-placeholder="form-email" placeholder="E-posta Adresiniz" required>
           </div>
-          <input type="tel" name="phone" data-i18n-placeholder="form-phone" placeholder="Telefon Numaranız" required pattern="[0-9\s\+\-\(\)]{7,20}">
+          <input type="tel" name="phone" inputmode="numeric" data-i18n-placeholder="form-phone" placeholder="Telefon Numaranız" required pattern="[0-9\s\+\-\(\)]{7,20}" oninput="this.value=this.value.replace(/\D/g,'')">
           <select name="interest" data-i18n-placeholder="form-interest" required>
             <option value="" disabled selected data-i18n="form-interest">İlgi Alanınız</option>
             <option value="satilik" data-i18n="form-interest-1">Satılık Konut</option>
@@ -427,6 +427,6 @@
   </footer>
 
   <script src="js/translations.js"></script>
-  <script src="js/script.js"></script>
+  <script src="js/script.js?v=2"></script>
 </body>
 </html>

@@ -164,6 +164,9 @@
 
         form.querySelectorAll('input, select, textarea').forEach(el => {
             el.addEventListener('input', () => {
+                if (el.name === 'phone') {
+                    el.value = el.value.replace(/\D/g, '');
+                }
                 el.classList.remove('error');
                 if (errorDiv.style.display === 'block') {
                     const errors = validateForm(form);
